@@ -1,0 +1,99 @@
+--== PHP ülesanded 03 ==--
+Õpetaja Aare Klooster, aine PHP, kuupäev 10.2007
+
+Vastused pange TMK serveri kodukataloogi \\angel\username\public_html\php\ylesanded\yl0301.php järgmine failinimega yl0302.php jne. Ülesanded peavad olema näha siit http://students.tmk.edu.ee/php/projektid/projektide_kontroll.php Lisa koodi sisse kommentaariks failide esimele reaks oma nimi, rühm ja kuupäev.
+
+FUNKTSIOONID
+
+================================
+Ülesanne 0301
+
+Luua massiivi nimega "loomad" elementidega Karu, Jänes, Hunt, Rebane, Hirv, Hiir, Põder, Ahv, Mäger, Mutt. Karu massiivi elemendi number olgu 0, Jänesel 1 jne.
+
+Teha funktsioon nimega "kuva_massiiv". Funktsiooni sisendargumendiks olgu massiiv mida soovime välja kuvada. Funktsiooni sees lugeda funktsiooniga "sizeof" elemendid kokku ja väljastada tsükliga kõik masiivi elemendid üksteise alla. Kuvatud elemendi ette panna ka massiivi elemendi number. Kuvamisel panna kõige lõppu panna paragrafi tag "<p>".
+
+Näide:
+0. Karu
+1. Jänes
+2. Hunt
+jne.
+
+Lisainfona mainiks, et peale 0301-0303 ülesannet peaks tulema umbes selline programm:
+
+funktsioon kuva_massiiv
+funktsioon vaheta_elemendid
+funktsioon kustuta_element
+
+tee massiiv
+kuva_massiiv
+vaheta_elemendid
+kuva_massiiv
+kustuta_element
+kuva_massiiv
+
+
+================================
+Ülesanne 0302
+
+Jätkata eelmist ülesannet. 
+
+Teha funktsioon nimega "vaheta_elemendid". Funktsiooni sisendargumendiks olgu kaks massiivi elemendi numbrit, mille kohtasid massiivis soovime vahetada ja massiiv ise. Kasutada tuleb funktsioonisisest lisamuutujat. Vahetada elementide "3. Rebane" ja "7. Ahv" massiivi kohad. Tagasta massiiv põhiprogrammile. Kuvada "kuva_massiiv" funktsiooniga massiiv välja.
+
+Näide: 
+Rebane jääb nr. 7-ks
+Ahv jääb nr. 3-ks
+
+function vaheta_elemendid($e1, $e2, $mas)  {
+
+	$ajutine = $mas[$e1];
+	$mas[$e1] = $mas[$e2];
+	$mas[$e2] = $ajutine;
+
+	return $mas;
+
+}
+
+$loomad = vaheta_elemendid(3, 7, $loomad);
+
+
+================================
+Ülesanne 0303
+
+Jätkata eelmist ülesannet. 
+
+Teha funktsioon nimega "kustuta_element". Funktsiooni sisendargumendiks olgu massiivi elemendi nr. mille väärtust soovime kustutada ja massiiv ise. Kustutatud elemendist järgmised liikugu ühe koha võrra ettepoole. Kustuta massiivi viimane tühi element funktsiooniga unset($mas[key]). Tagasta massiiv põhiprogrammile. Kustuta funktsiooniga element nr. 1 "Jänes". Kuvada "kuva_massiiv" funktsiooniga massiiv välja.
+
+Näide:
+Oli 0. Karu, 1. Jänes, 2. Hunt jne.
+Peale kustutamist olgu 0. Karu, 1. Hunt jne.
+
+
+================================
+Ülesanne 0304
+
+Kasutades arikmeetilist tehet moodul teha funktsioon nimega "nr_info", mille sisendargumendiks on täisarv ja mis: 
+
+1. Teatab kasutajale kas tegu on paaris või paaritu arvuga.
+	Mooduli näide:
+	12%2=0
+	13%2=1
+	14%2=0
+2. Teatab kasutajale kas arv on suurem või väiksem kui 10.
+3. Teatab kasutajale kas arv on suurem või väiksem kui 100.
+4. Näitab kasutajale arvu ruudus.
+5. Näitab kasutajale arvust ruutjuurt.
+
+Käivita funktsioon 5 korda sisestades arvudeks: 1, 8, 9, 15, 200
+
+
+================================
+Ülesanne 0305
+
+Teha funktsioon nimega "string_info". Funktsiooni sisendargumendiks olgu teksti string ($string). Funktsioon üleb: ,
+
+1. Mis on selle stringi esimene täht ja viimane täht. Funkts. "strlen" leiab stringi pikkuse ja "echo $string[0]" kuvab esimese tähe.
+2. Mitu tähte stringis on (strlen).
+3. Kogu string tehaks läbiva väiketähega (strtolower) ja väljastatakse.
+4. Kogu string tehaks läbiva suurtähega (strtoupper) ja väljastatakse.
+5. Tsükliga loetakse kokku ja kuvatakse ekraanile mitu "a" tähte stringis esineb.
+

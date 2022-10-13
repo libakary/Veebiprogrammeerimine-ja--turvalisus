@@ -1,0 +1,117 @@
+--== PHP ülesanded 01 ==--
+Õpetaja Aare Klooster, aine PHP, kuupäev 09.2007
+
+Vastused pange TMK serveri kodukataloogi \\angel\username\public_html\php\ylesanded\yl0101.php järgmine failinimega yl0102.php jne. Ülesanded peavad olema näha siit http://students.tmk.edu.ee/php/projektid/projektide_kontroll.php Lisa koodi sisse kommentaariks failide esimele reaks oma nimi, rühm ja kuupäev.
+
+TSÜKLID
+
+
+================================
+Ülesanne 0101
+
+Järgnevas ülesandes tohib kasutada vaid IF tingimust ja FOR tsükklit. Arvude üleühe kuvamiseks kasutage lisamuutujat. Kuvada ühe FOR tsükkliga välja järgmine arvude jada järgmisel kujul: 
+
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+
+
+================================
+Ülesanne 0102
+
+Järgnevas ülesandes tohib kasutada vaid IF tingimust ja FOR tsükklit. Kuvada ühe FOR tsükkliga välja järgmine arvude jada järgmisel kujul: 
+
+-11
+-10
+-9
+-8
+-7
+-6
+-5
+-4
+-3
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+================================
+Ülesanne 0103
+
+Järgnevas ülesandes tohib kasutada vaid IF tingimust, mooduli võtmist (mod %) ja FOR tsükklit. Kuvada ühe FOR tsükkliga välja järgmine arvude jada järgmisel kujul: 
+
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+
+
+================================
+Ülesanne 0104
+
+Kuvada kahe FOR tsükkliga välja järgmine arvude jada järgmisel kujul: 
+
+1,0
+1,1
+1,2
+1,3
+1,4
+1,5
+1,6
+1,7
+1,8
+1,9
+2,0
+2,1
+... jne kuni
+9,9
+
+
+================================
+Ülesanne 0105
+
+Kuvada kahe FOR tsükkliga välja järgmine arvude jada järgmisel kujul:
+
+10,-10
+10,-9
+10,-8
+10,-7
+10,-6
+10,-5
+10,-4
+10,-3
+10,-2
+10,-1
+10,0
+10,1
+10,2
+10,3
+10,4
+10,5
+10,6
+10,7
+10,8
+10,9
+10,10
+9,-10
+9,-9
+... jne. kuni
+-10,10

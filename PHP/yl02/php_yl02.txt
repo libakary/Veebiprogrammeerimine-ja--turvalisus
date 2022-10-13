@@ -1,0 +1,51 @@
+--== PHP ülesanded 02 ==--
+Õpetaja Aare Klooster, aine PHP, kuupäev 09.2007
+
+Vastused pange TMK serveri kodukataloogi \\angel\username\public_html\php\ylesanded\yl0201.php järgmine failinimega yl0202.php jne. Ülesanded peavad olema näha siit http://students.tmk.edu.ee/php/projektid/projektide_kontroll.php Lisa koodi sisse kommentaariks failide esimele reaks oma nimi, rühm ja kuupäev.
+
+MASSIIVID
+
+================================
+Ülesanne 0201
+
+Genereeri tsükliga 100 täisarvust koosnev massiiv.
+Väljasta see "print_r" funktsiooniga.
+
+
+
+================================
+Ülesanne 0202
+
+Lisa käsitsi massiivi 10 looma nime kasutades massiivi kohanäitu. Nt. $mas[0]="karu" jne.
+Väljasta see "foreach" tsükkliga.
+
+
+
+================================
+Ülesanne 0203
+
+Lisa käsitsi massiivi 10 näitleja nime kasutades massiivi array funktsiooni. 
+Väljasta see "for" tsükkliga.
+
+
+
+================================
+Ülesanne 0204
+
+Lisa massiivi ühe kodaniku viis erinevat isikuandmete (nimi, vanus jne.) elementi.
+Väljasta need ise püstitatud lauses, sellesama kodaniku kohta.
+Nt. "Kodanik [nimi] on [vanus] aastane"
+
+
+
+================================
+Ülesanne 0205
+
+
+Sisesta käsitsi 3x3 kahemõõtmeline massiiv. Massiivi elementideks pane filmide nimed.
+Nt.
+$mas[1][1]
+$mas[1][2]
+jne.
+
+Väljasta massiiv tsükliga.

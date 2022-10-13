@@ -1,0 +1,39 @@
+--== PHP ülesanded 05 ==--
+Õpetaja Aare Klooster, aine PHP, kuupäev 03.2011
+
+Vastused pange TMK serveri kodukataloogi \\angel\username\public_html\php\ylesanded\yl0501.php järgmine failinimega yl0502.php jne. Ülesanded peavad olema näha siit http://students.tmk.edu.ee/php/projektid/projektide_kontroll.php Lisa koodi sisse kommentaariks failide esimele reaks oma nimi, rühm ja kuupäev.
+
+FUNKTIOONIDE LOOMINE
+
+================================
+Ülesanne 0501
+
+Teha funktsioon nimega get_brithday. Mille sisendiks oleks isikukood ja väljundiks sünniaeg. Isikukoodis näitab esimene nr. sugu, 2 ja 3 sünniaastat, 4 ja 5 sünnikuud, 6 ja 7 sünnipäeva ja ülejäänud numbrid 3 on suvalised ja lõpuks kontrollsumma.
+Nt. kui $ik="37903250678"; siis aasta leiaks $y = "19".$ik[1].$ik[2]; 
+Sinu isikukood on: 37903250678
+Sinu sünnipäev on: 25.03.1979
+Peale aastat 2000 on isikukoodi esimesed numbrid 5 ja 6.
+
+================================
+Ülesanne 0502
+
+Teha funktsioon nimega "est_day". Selle sisendiks olgu date funktsiooniga saadud nädalapäev. Väljundiks aga eesti keelne nädalapäev. 
+* Leida kuidas date funktsioon leiab nädalapäeva (http://ee.php.net/manual/en/function.date.php)
+* Sisestada see funktsiooni
+* Luua massiiv nt. ja leida päeva vastavus massiivi elemendile
+$mas[1]="Esmaspäev"; 
+$mas[2]="Teisipäev";
+* Tagastada peaprogrammile (return) ja seal väljastada eesti keelne nädalapäeva nimetus
+
+
+================================
+Ülesanne 0503
+
+Teha üks funktsioon nimega "fun_math". Funktsiooni sisend argumentideks on kolm arvu $a, $b, $c. Väljastada funktsiooni resultaat kõigi kirjeldatud situatsioonide puhul, kõigil puhkudel peaksid erinevad arvud olema. Väljastada ka sisendarvud.
+* kui $a on väiksem kui $b siis lahutada $b-st $a ja liita $c pöördväärtus (teispidine märk)
+* Kui $a on suurem kui $b siis ja kumbki pole 0 siis võtta $a astmesse $b
+* Kui $a on võrdne $b-ga siis liita $a-le juurde $c ja lahutada $b-st $c ja saadud arvud omavahel kokku liita
+* Kui $a korrutis $b-ga on võrdne $c-ga siis lahutada $c-st kahekordne $a ja $b korrutis
+* Kui $a on suurem kui $b ja kui $b on suurem kui $c ja ükski nendest ei võrdu nulli ega negatiivse arvuga, siis liita kaks suuremat arvu ja jagada väikseima arvuga.
+
+Proovida funktsiooni 10 erineva sisendarvudega.

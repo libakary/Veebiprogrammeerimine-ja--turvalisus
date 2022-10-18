@@ -6,8 +6,8 @@ if (isset($server) && (isset($user)) && (isset($password)) && (isset($database))
 }
 
 ?>
-    <!doctype html>
-    <html>
+<!doctype html>
+<html>
 <head>
     <title>Teated lehel</title>
     <style type="text/css">
@@ -48,25 +48,25 @@ if (isset($server) && (isset($user)) && (isset($password)) && (isset($database))
         //Kysim2rgi asemele pannakse aadressiribalt tulnud id,
         //eeldatakse, et ta on tyybist integer (i).
         //(double - d, string - s)
-                     $kask->bind_param("i", $_REQUEST["id"]);
-                     $kask->bind_result($id, $pealkiri, $sisu);
-                     $kask->execute();
-                     if($kask->fetch()){
-                         echo "<h2>".htmlspecialchars($pealkiri)."</h2>";
-                         echo htmlspecialchars($sisu);
-                     } else {
-                         echo "Vigased andmed.";
-                     }
-                 } else {
-                     echo "Tere tulemast avalehele! Vali men&uuml;&uuml;st sobiv teema.";
-                 }
-                 ?>
-        </div>
-        <div id="jalusekiht">
-            Lehe tegi Jaagup
-        </div>
-        </body>
-        </html>
-        <?php
-        $yhendus->close();
-        ?>
+         $kask->bind_param("i", $_REQUEST["id"]);
+         $kask->bind_result($id, $pealkiri, $sisu);
+         $kask->execute();
+         if($kask->fetch()){
+             echo "<h2>".htmlspecialchars($pealkiri)."</h2>";
+             echo htmlspecialchars($sisu);
+         } else {
+             echo "Vigased andmed.";
+         }
+     } else {
+         echo "Tere tulemast avalehele! Vali men&uuml;&uuml;st sobiv teema.";
+     }
+     ?>
+</div>
+<div id="jalusekiht">
+    Lehe tegi Jaagup
+</div>
+</body>
+</html>
+<?php
+$yhendus->close();
+?>

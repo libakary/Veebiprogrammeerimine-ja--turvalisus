@@ -1,5 +1,6 @@
 <?php
 //$yhendus=new mysqli("localhost", "tunniplaan", "W25]DLxRV5rcKFlK", "tunniplaan");
+global $yhendus;
 
 require ("dbConfig.php");
 if (isset($server) && (isset($user)) && (isset($password)) && (isset($database))) {
@@ -10,8 +11,8 @@ $kask->bind_result($id, $koeranimi, $kirjeldus, $pildiaadress);
 $kask->execute();
 
 if(isSet($_REQUEST["uusleht"])){
-    $kask=$yhendus->prepare("INSERT INTO koerad (koeranimi, kirjeldus, pildiaadress) VALUES (?, ?, ?)");
-    $kask->bind_param("ss", $_REQUEST["koeranimi"], $_REQUEST["kirjeldus"], $_REQUEST["pildiaadress"]);
+    $kask = $yhendus->prepare("INSERT INTO `koerad` (`koeranimi`, `kirjeldus`, `pildiaadress`) VALUES (?, ?, ?)");
+    $kask->bind_param("sss", $_REQUEST["koeranimi"], $_REQUEST["kirjeldus"], $_REQUEST["pildiaadress"]);
     $kask->execute();
     header("Location: $_SERVER[PHP_SELF]");
     $yhendus->close();
@@ -28,7 +29,7 @@ if(isSet($_REQUEST["kustutusid"])){
 <html>
 <head>
     <title>Koerad lehel</title>
-    <style type="text/css">
+    <style ="text/css">
         #menyykiht{
             float: left;
             padding-right: 30px;

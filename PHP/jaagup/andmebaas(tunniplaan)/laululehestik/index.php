@@ -1,6 +1,8 @@
 <?php
 require("../dbConfig.php");
 global $yhendus;
+
+// lisab laulule punkti tabelis
 if(isSet($_REQUEST["healaulu_id"])){
     $kask=$yhendus->prepare("UPDATE laulud SET tulemus=tulemus+1 WHERE id=?");
     $kask->bind_param("i", $_REQUEST["healaulu_id"]);
@@ -10,11 +12,13 @@ if(isSet($_REQUEST["healaulu_id"])){
 
 <!doctype html>
 <html lang="et">
-<head><title>Laulud</title>
+<head>
+    <title>Laulud</title>
 </head>
 <body>
-<h1>Laulud</h1>
+    <h1>Laulud</h1>
 <table>
+    <!-- näitab laulu, saab punkti lisada -->
     <?php
     $kask=$yhendus->prepare("SELECT id, pealkiri, tulemus FROM laulud");
     $kask->bind_result($id, $pealkiri, $punktid);

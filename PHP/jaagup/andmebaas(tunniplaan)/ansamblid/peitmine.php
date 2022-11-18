@@ -1,5 +1,5 @@
 <?php
-require("../dbConfig.php");
+// require("../dbConfig.php");
 global $yhendus;
 
 if(isSet($_REQUEST["peitmise_id"])){
@@ -21,12 +21,6 @@ if(isSet($_REQUEST["ava_bandid"])){
     $kask->execute();
 }
 ?>
-    <!doctype html>
-    <html lang="et">
-    <head>
-        <title>Ansamblid</title>
-    </head>
-    <body>
     <h1>Ansamblid</h1>
     <?php
     echo "<a href='?ava_bandid'>Ava</a> / ";
@@ -56,9 +50,3 @@ if(isSet($_REQUEST["ava_bandid"])){
         }
         ?>
 </table>
-</body>
-</html>
-
-<?php
-$yhendus->close();
-?>

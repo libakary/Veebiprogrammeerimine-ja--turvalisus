@@ -2,6 +2,7 @@
 require("../dbConfig.php");
 global $yhendus;
 
+// võimaldab uusi laule lisada
 if(!empty($_REQUEST["uuepealkiri"])){
     $kask=$yhendus->prepare(
         "INSERT INTO laulud(pealkiri) VALUES(?)");
@@ -22,6 +23,7 @@ if(!empty($_REQUEST["uuepealkiri"])){
 <body>
 <h1>Laulud</h1>
 <form action="?">
+    <!-- saab uue laulu lisada -->
     <label>Uue laulu pealkiri:
         <input type="text" name="uuepealkiri" />
     </label>

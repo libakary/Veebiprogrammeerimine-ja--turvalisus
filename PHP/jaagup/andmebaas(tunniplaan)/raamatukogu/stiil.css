@@ -1,0 +1,85 @@
+
+body {
+    background-color: #f1d6be;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2 {
+    font-weight: normal;
+    text-shadow: 2px 2px 3px #666666;
+    background-color: #f2e8df;
+    padding: 10px;
+    display: inline-block;
+}
+.button1 {
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #f27c6c;
+    color: black;
+    border: 2px solid white;
+}
+.button1:hover {
+    background-color: white;
+}
+
+.button2 {
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #ffd699;
+    color: black;
+    border: 2px solid white;
+}
+.button2:hover {
+    background-color: white;
+}
+
+.button3 {
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #7da368;
+    color: black;
+    border: 2px solid white;
+}
+.button3:hover {
+    background-color: white;
+}
+
+.button4 {
+    margin-top: 5px;
+    background-color: #ffd699;
+    color: black;
+    border: 2px solid white;
+}
+.button4:hover {
+    background-color: white;
+}
+
+
+table {
+    background-color: #f1d6be;
+}
+tr, th, td {
+    border-spacing: 20px 20px;
+    background-color: #ffebcd;
+    padding: 10px 10px 10px 10px;
+}
+tr:hover {
+    background-color: #fff4e3;
+}
+th {
+    background-color: #ffd699;
+    border-bottom: 2px solid #111111;
+    text-align: left;
+}

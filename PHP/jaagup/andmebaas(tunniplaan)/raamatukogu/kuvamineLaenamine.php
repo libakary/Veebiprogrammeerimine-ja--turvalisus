@@ -10,12 +10,7 @@ global $yhendus;
 // laenutab raamatu, muudab saadavuse, lisab
 if(isSet($_REQUEST["laenutus_id"])){
     $kask=$yhendus->prepare(
-            "UPDATE raamatukogu SET saadavus=0 WHERE id=?");
-    $kask->bind_param("i", $_REQUEST["laenutus_id"]);
-    $kask->execute();
-
-    $kask=$yhendus->prepare(
-    "UPDATE raamatukogu SET laenutus_kuup= current_date, tagastus_kuup= date_add(current_date, INTERVAL 21 DAY) WHERE id=?");
+    "UPDATE raamatukogu SET laenutus_kuup= current_date, tagastus_kuup= date_add(current_date, INTERVAL laenutuspikkus DAY), saadavus=0 WHERE id=?");
     $kask->bind_param("i", $_REQUEST["laenutus_id"]);
     $kask->execute();
 }
@@ -24,7 +19,6 @@ include("header.php");
 ?>
     <style>
         img {
-
             background-size: cover;
             display: inline-block;
             height: auto;
@@ -33,12 +27,17 @@ include("header.php");
         }
     </style>
     <img alt="bookcase with lights" src="images/leht.png">
-    <?php
-    include("navigatsioon.php");
-    ?>
     <title>Raamatute nimekiri</title>
 </head>
 <body>
+<header>
+    <h1>Raamatukogu</h1>
+    <nav>
+        <?php
+        include("navigatsioon.php");
+        ?>
+    </nav>
+</header>
 
     <h2>Raamatute laenamine</h2>
 <table>

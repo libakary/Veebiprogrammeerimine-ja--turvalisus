@@ -5,8 +5,8 @@ global $yhendus;
 
 if(!empty($_REQUEST["uusraamat"])){
     $kask=$yhendus->prepare(
-        "INSERT INTO raamatukogu(nimi, autor, saadavus) VALUES(?,?,1)");
-    $kask->bind_param("ss", $_REQUEST["uusraamat"],$_REQUEST["uusautor"]);
+        "INSERT INTO raamatukogu(nimi, autor, laenutuspikkus ,saadavus) VALUES(?,?,?,1)");
+    $kask->bind_param("ssi", $_REQUEST["uusraamat"],$_REQUEST["uusautor"], $_REQUEST["laenutuspikkus"]);
     $kask->execute();
     echo $yhendus->error;
     header("Location: $_SERVER[PHP_SELF]");
@@ -32,12 +32,17 @@ include("header.php");
 
     </style>
     <img alt="bookcase with lights" src="images/leht.png">
-    <?php
-    include("navigatsioon.php");
-    ?>
     <title>Raamatu lisamine</title>
 </head>
 <body>
+<header>
+    <h1>Raamatukogu</h1>
+    <nav>
+        <?php
+        include("navigatsioon.php");
+        ?>
+    </nav>
+</header>
 
 <h2>Lisa uus raamat</h2>
 <form action="?">
@@ -48,6 +53,10 @@ include("header.php");
     <br>
     <label>Autori nimi:<br>
         <input type="text" name="uusautor" />
+    </label>
+    <br>
+    <label>Laenutuspikkus:<br>
+        <input type="text" name="laenutuspikkus" />
     </label>
     <br>
     <input class="button4" type="submit" value="Lisa raamat" />

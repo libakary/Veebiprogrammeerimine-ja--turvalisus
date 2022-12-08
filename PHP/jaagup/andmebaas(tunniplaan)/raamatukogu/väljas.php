@@ -6,6 +6,12 @@
 require("../dbConfig.php");
 global $yhendus;
 
+if(isSet($_REQUEST["tagastus_id"])){
+    $kask=$yhendus->prepare(
+        "UPDATE raamatukogu SET saadavus=1, laenutus_kuup= null WHERE id=?");
+    $kask->bind_param("i", $_REQUEST["tagastus_id"]);
+    $kask->execute();
+}
 include("header.php");
 ?>
 
@@ -20,18 +26,24 @@ include("header.php");
         }
     </style>
     <img alt="bookcase with lights" src="images/leht.png">
-    <?php
-    include("navigatsioon.php");
-    ?>
     <title>Väljalaenutatud raamatud</title>
 </head>
 <body>
+<header>
+    <h1>Raamatukogu</h1>
+    <nav>
+        <?php
+        include("navigatsioon.php");
+        ?>
+    </nav>
+</header>
 <h2>Väljalaenutatud raamatud</h2>
 <table>
     <tr>
         <th>Pealkiri</th>
         <th>Autor</th>
         <th>Laenutusaeg</th>
+        <th>Tagasta</th>
     </tr>
     <?php
     $kask = $yhendus->prepare(
@@ -51,6 +63,7 @@ include("header.php");
               <td>$raamatunimi</td>
               <td>$autor</td>
               <td style='background: #7da368'>$laenupikkus</td>
+              <td><a href='?tagastus_id=$id'>Tagasta raamat</a></td>
               </tr>";
         }
         else if ($laenupikkus <= 0) {
@@ -58,6 +71,7 @@ include("header.php");
               <td>$raamatunimi</td>
               <td>$autor</td>
               <td style='background: #f27c6c'>$laenupikkus</td>
+              <td><a href='?tagastus_id=$id'>Tagasta raamat</a></td>
               </tr>";
         }
         else if ($laenupikkus > 0 && $laenupikkus <= 7) {
@@ -65,11 +79,9 @@ include("header.php");
               <td>$raamatunimi</td>
               <td>$autor</td>
               <td style='background: #ffec99'>$laenupikkus</td>
+              <td><a href='?tagastus_id=$id'>Tagasta raamat</a></td>
               </tr>";
         }
-
-
-
     }
     ?>
 </table>

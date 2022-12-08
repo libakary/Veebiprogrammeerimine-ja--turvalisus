@@ -7,7 +7,7 @@ include("header.php");
 
     <style>
         body {
-            background-image: url("images/avaleht.png");
+            background-image: url("images/avaleht.jpg");
             background-position-y: 100px;
             background-repeat: no-repeat;
             image-resolution: from-image;
@@ -19,6 +19,7 @@ include("header.php");
         }
         nav {
             padding-top: 40px;
+            float: none;
         }
         .button1 {
             border-radius: 12px;

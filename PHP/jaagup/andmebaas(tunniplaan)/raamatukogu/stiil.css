@@ -4,6 +4,10 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+nav {
+    float: right;
+}
+
 h1, h2 {
     font-weight: normal;
     text-shadow: 2px 2px 3px #666666;

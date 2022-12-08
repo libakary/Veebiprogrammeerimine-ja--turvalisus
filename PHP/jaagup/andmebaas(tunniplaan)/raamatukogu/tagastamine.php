@@ -33,12 +33,17 @@ if(isSet($_REQUEST["tagastus_id"])){
             padding: 0 5px ;
         }
     </style>
-    <?php
-    include("navigatsioon.php");
-    ?>
     <title>Raamatute tagastamine</title>
 </head>
 <body>
+<header>
+    <h1>Raamatukogu</h1>
+    <nav>
+        <?php
+        include("navigatsioon.php");
+        ?>
+    </nav>
+</header>
 <h2>Raamatute tagasi võtmine</h2>
 <table>
     <?php
